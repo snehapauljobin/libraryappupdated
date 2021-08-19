@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>HomePage</title>
+<!------<meta name="viewport" content="width=device-width, initial-scale=1">-->
+<link rel="stylesheet" href="/css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" ></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js'></script>
+
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+<script src="https://kit.fontawesome.com/7e3306a0d5.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/7e3306a0d5.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<!-------------------------Background and Navbar------------------------->
+
+
+<div class="banner">
+<div class="nav-bar">
+    <nav class="navbar navbar-expand-lg navbar-light bg">
+  <div class="container-fluid">
+    <div class="navbar-brand" ><h2>Library</h2></div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      
+<%if(role!=='admin' && role!=='user'){%>
+
+          <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/signin">Books</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/signin">Authors</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/signin">Add Author</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/signin">Add book</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/signin">Sign In</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/signupval">Sign UP</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/logout">Log Out</a>
+        </li>
+          </ul>
+       <%}%>
+
+
+       <%if(role=='admin'||role=='user'){%>
+
+<ul class="navbar-nav">
+<li class="nav-item">
+<a class="nav-link active" aria-current="page" href="/books">Books</a>
+</li>
+<li class="nav-item">
+<a class="nav-link active" aria-current="page" href="/authors">Authors</a>
+</li>
+<li class="nav-item">
+ <a class="nav-link active" aria-current="page" href="/logout">Log Out</a>
+ </li>
+</ul>
+<%}%>
+       
+<%if(role=='admin'){%>
+  <ul class="navbar-nav">
+  <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/adminauthor">Add Author</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/adminbook">Add book</a>
+        </li>
+      </ul>
+      <%}%>
+
+
+
+    </div>
+  </div>
+</nav>
+</div>
+<div class="header">
+<h2>"When in doubt go to the library"<br><br><small style="font-family: cursive;">J.K. ROWLING</small> </h2>
+</div>
+</div>
+<br>
+<br>
+
+
+<!------------------Aside contents------------------->
+<section class="contents">
+<div class="container aside">
+  <div class="row">
+  
+    <br>
+    <br>
+    <h5>At a Glance</h5>
+  <p style="font-family: cursive;">The Central Library is one of the oldest Libraries in India.In order to use the library services one has to register and become a member of the library. The library subscribes 25 dailies and 225 journals including foreign journals.The library has a total collection of 455274 documents in different languages such as English, Malayalam, Hindi, Tamil, Sanskrit in various disciplines.
+ Summer school that starts in April and lasts a month. Admission is available for students of 5th to 9th standards.The aim of Summer school is to develop reading habits among children through entertainment.</p></div>
+<br>
+  
+   
+  
+  </div>
+</section>
+  <br>
+  <br>
+  
+  
+
+  
+ 
+
+
+  <!--------------------------Icons and Cards------------------------------------->
+<section id="booksauthors">
+  
+  <div class="container">
+    
+  <div class="row">
+   
+  <div class="col-sm-3">
+   
+    <div class="card border-0" style="width: 15rem;">
+      <h5>Authors</h5>
+      <a href="/authors"> <i class="far fa-edit icons fa-vc"></i></a><br>
+  
+  <p class="card-text" style="font-family: cursive;"> Get current affairs related to Authors and their publications.
+  </p>
+</div>
+</div>
+<div class="col-sm-3">
+    <div class="card border-0" style="width: 15rem;">
+      <h5>Books</h5>
+      <a href="/books"><i class="fa fa-book icons fa-vc"></i></a><br>
+
+      
+    <p class="card-text" style="font-family: cursive;">Collection of   455274 documents in various languages.</p>
+ </div>
+    </div>
+    <%if(role!='admin'){%>
+    <div class="col-sm-1"></div>
+    
+    <div class="col-sm-4">
+
+<img class="user" src="/images/useribrary.jpg" style="border-radius: 20px;">
+
+</div><%}%><br><br><br><br>
+    <%if(role=='admin'){%>
+  <div class="col-sm-3">
+    <div class="card border-0" style="width: 15rem;">
+      <h5>Add Books</h5>
+      <a href="/adminbook">  <i class="fa fa-sign-in icons fa-vc" aria-hidden="true"></i></a><br>
+
+    <p class="card-text" style="font-family: cursive;">Provision to add new books to the collection.</p>
+</div>
+  </div>
+
+ 
+
+  <%}%>
+  <%if(role=='admin'){%>
+  <div class="col-sm-3">
+    <div class="card border-0" style="width: 15rem;">
+      <h5>Add Authors</h5>
+      <a href="/adminauthor"><i class="fa fa-sign-in icons fa-vc" aria-hidden="true"></i></a><br>
+
+    <p class="card-text" style="font-family: cursive;">Provision to add new authors to the collection.</p>
+</div>
+  </div>  <%}%>
+ 
+<br><br><br>
+</section>
+
+<br><br>
+ 
+  <!------------------------New Arrivals--------------------->
+  <h4>New Arrivals</h4><br><br><br><br>
+  <br><br><br><br>
+  <section id="photos">
+
+<div class="container">
+<div class="row">
+
+  <div class="col-sm-3">
+  <div class="wrapper">
+  <div class="img-area">
+  <div class="img-animation">
+  
+  <img class="front-side" src="/images/aadujeevithamfront.jpg">
+  <div class="back-side" style="background:#8b5d06; font-family: cursive;"> 
+    Aadujeevitham is a Malayalam novel about an abused migrant worker in Saudi Arabia written by Bahrain-based Indian author Benyamin.</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div class="col-sm-3">
+  <div class="wrapper">
+  <div class="img-area">
+  <div class="img-animation">
+  
+  <img class="front-side" src="/images/four winds.jpg">
+  <div class="cfb-face cfb-back cfb-data cfb-image back-side" style="background:#8b5d06; font-family: cursive;"> 
+    The Four Winds by Kristin Hannah is a captivating, heartbreaking tale of a family who will do anything for each other to survive.</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div class="col-sm-3">
+  <div class="wrapper">
+  <div class="img-area">
+  <div class="img-animation">
+  
+  <img class="front-side" src="/images/onelast stop.jpg">
+  <div class="cfb-face cfb-back cfb-data cfb-image back-side" style="background:#8b5d06; font-family: cursive;"> 
+    Casey McQuiston's One Last Stop is a delightful speculative tale that follows August Landry, a somewhat cynical mystery lover.</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+<div class="col-sm-3">
+  <div class="wrapper">
+  <div class="img-area">
+  <div class="img-animation">
+  
+  <img class="front-side" src="/images/karnan.jpg">
+  <div class="cfb-face cfb-back cfb-data cfb-image back-side" style="background:#8b5d06; font-family: cursive;"> 
+    Karnan is a book based on Mahabharatha epic, originally written by a marathi novelist and translated in to various languages.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+</section>
+
+
+
+  <!--------------------Footer------------->
+  
+  <section class="footer" style="color:rgb(135, 99, 7); height:50px">
+    
+    <h5><b>Copyright@2021</b></h5>
+    </section>
+  
+
+
+
+</body>
+</html>
+
+  
+
+
+
+
+
+
+
+
+
+
+

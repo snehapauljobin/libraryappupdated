@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>SIGN UP</title>
+<!---<meta name="viewport" content="width=device-width, initial-scale=1">-->
+<link rel="stylesheet" href="css/signupval.css">
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" ></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js'></script>
+
+
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+<script src="https://kit.fontawesome.com/7e3306a0d5.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<!-------------------------Background and Navbar------------------------->
+<div class="banner">
+    <nav class="navbar navbar-expand-lg navbar-light bg-">
+      <div class="container-fluid">
+    <div class="navbar-brand" ><h2 style="font-family: cursive; color:white">Sign Up</h2></div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/signin">Sign In</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container">
+<div class="col-lg-4"></div>
+
+  <form method="POST" action="/signupval/add" onsubmit="return validateForm()">
+<div class="row  col-lg-4 offset-lg-4">
+    <header  style="font-family: cursive;">SIGN UP</header><br><br>
+    <div class="form-group">
+      <input class="myInput" type="text" placeholder="Name" id="username1" name="name" style="font-family: cursive;"><br>
+      <label for="error1" id="error1"  style="font-family: cursive;"></label>
+    </div>
+    <div class="form-group">
+      <input class="myInput" type="text" placeholder="Phone Number (10 digit)" id="phonenumber" name="phonenumber" style="font-family: cursive;"><br>
+      <label for="error5" id="error5"  style="font-family: cursive;"></label>
+    </div>
+    <div class="form-group">
+      <input  class="myInput" name="email" type="text" placeholder="Email" id="email2"  style="font-family: cursive;"><br>
+      <label for="error2" id="error2"  style="font-family: cursive;"></label>
+    <div>
+      
+      <div class="form-group">
+      <input  onkeyup="validatepassword()"  class="myInput" type="password" placeholder="Password" id="password" name="password" style="font-family: cursive;">
+     
+    <i class="show fa fa-eye" aria-hidden="true" onclick="toggle()"></i> 
+     
+    <i class="hide fa fa-eye-slash" onclick="toggle1()" ></i>
+
+</div>
+    <div class="indicator" id="strengthmeter">
+    <span class= "weak" id="weak1"></span>
+    <span class= "medium" id="medium1"></span>
+    <span class= "strong" id="strong1"></span>
+    </div>
+    <label for="error3" id="error3"  style="font-family: cursive;"></label><br><br>
+    <div class="form-group">
+      <input   class="myInput" type="password" placeholder="Confirm password" id="password2"  style="font-family: cursive;"><br>
+      <label for="error4" id="error4"  style="font-family: cursive;"></label>
+    <div>
+
+    <div class="form-group"><br> 
+            <input type="submit" class="butt"  value="SIGN UP"  style="font-family: cursive;">
+</form>
+        </div>
+        <div  class="col-lg-4"></div>
+    
+  
+
+</div>
+
+
+
+
+
+
+
+<!------------------------CARD AND FORM----------------------------->
+<script defer src="js/signupval.js"></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+
+*{
+    padding:0;
+    margin:0;
+    font-family:sans-serif;
+    box-sizing: border-box;
+   
+   
+}
+html, body{
+    overflow-x: hidden;
+    width:100%;
+}
+
+
+.banner{
+
+    background: linear-gradient(rgba(0,0, 0, 0.1), #152401),url(../images/photolibrary.jpg);
+    background-position: center; 
+    background-size:cover!important; 
+    height: 100vh;
+    width:auto;
+    color:#fff;
+   
+   
+}
+.navbar-brand h2{
+    color: rgb(135, 99, 7);
+    font-family:cursive;
+}
+.nav-bar{
+   background-color: #efefef;
+    top:0;
+    position: sticky;
+    z-index: 10;
+}
+
+
+.nav-link{
+    color: rgb(135, 99, 7)!important;
+    font-weight: 700px;
+    font-size:18px;
+    font-family:cursive;
+}
+.navbar-nav li{
+    padding: 20px;
+}
+
+ul li:after{
+    content:'';
+    width:0%;
+    height:2px;
+    background:rgb(135, 99, 7);
+    display:block;
+    margin:auto;
+    transition: 0.5s;
+}
+ ul li:hover:after{
+    width:80%;
+    }  
+.header{
+        position:absolute;
+ }
+
+ .header h2{
+    font-weight:600px;
+    position: relative;
+    color: #fff;
+    font-family:cursive;
+    text-align: center;
+    margin-left:450px !important;
+    margin-top: 200px!important;
+    
+ }
+ 
+    h5,h4{
+        text-align:center;
+        font-family:cursive;
+        color: rgb(135, 99, 7);
+    }
+    
+
+ /*-----------------Aside contents---------------*/
+
+
+ .col-sm-6 p{
+    text-align: justify;
+ }
+
+ .container p{
+     font-size: 14px;
+     text-align: justify; 
+    
+ }
+ /* --------------Cards--------------------- */
+ .card{
+     margin-bottom: 100px;
+     padding:10px;
+     text-align:center; 
+     
+     
+    
+ }
+
+
+ /* ----------Gallery-------------------- */
+ 
+ 
+ h6{
+     padding-top:10px;
+     font-family:cursive;
+     color: rgb(135, 99, 7);
+    
+ }
+
+ /* ----------------------Footer------------ */
+  
+.footer p{
+    text-align: center;
+    padding-top: 20px;
+    color:rgb(135, 99, 7);
+} 
+
+
+.fa, .far{
+    background-color: rgb(135, 99, 7);
+    color: white;
+    text-align: center!important;
+    justify-content: center;
+    height: 120px; 
+    border-radius:100px;
+    width: 120px;  
+    vertical-align:middle!important;
+}
+i.icons{
+
+ font-size: 60px; 
+ vertical-align:middle!important;
+}
+.fa-vc{line-height:inherit!important;
+    text-align: center!important; 
+}
+.wrapper{
+    /* position:absolute; */
+    transform: translate(-50%,-50%);
+    
+}
+.img-animation{
+width:400px; 
+height:300px;
+position: relative;
+transform-style: preserve-3d;
+transform-origin: 100% 125px;
+transition: all 0.7s ease;
+left:150px;
+
+
+}
+.img-animation img{
+    width: 50%;
+}
+.img-area:hover .img-animation{
+    transform: rotateX(-180deg);
+
+}
+.front-side, .back-side{
+    width:400px;
+    height:300px;
+    position: absolute;
+    backface-visibility: hidden;
+}
+.back-side{
+    transform: rotateX(180deg);
+}
+.img-animation .back-side{
+    width:50%;
+}
+.back-side{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+.card .card-text {
+    font-size: 17px;
+    color:black;
+    
+}
+.card i{
+  
+    margin-left: 0;
+}

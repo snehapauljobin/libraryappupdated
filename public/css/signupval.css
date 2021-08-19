@@ -1,0 +1,130 @@
+*{
+    padding:0;
+    margin:0;
+    font-family:sans-serif;
+    box-sizing: border-box;
+   
+}
+.banner{
+
+     background:linear-gradient(rgba(0,0, 0, 0.3), hsla(42, 84%, 23%, 0.659)),url(../images/signuptrial.jpg);  
+    background-position: center;
+    background-size:cover!important;
+     height: 100vh;
+    overflow-x: hidden!important; 
+  
+}
+.navbar{
+    position:sticky;
+     padding-top: 0;
+     z-index:10;
+}
+.nav-link{
+    color: #fff!important;
+    font-weight:400;
+    font-size:18px;
+
+}
+.navbar-nav li{
+    padding: 20px;
+}
+.nav-link{
+    font-family:cursive;
+}
+
+ul li:after{
+    content:'';
+    width:0%;
+    height:2px;
+    background:rgb(255,255,255);
+    display:block;
+    margin:auto;
+    transition: 0.5s;
+}
+ ul li:hover:after{
+    width:80%;
+    }  
+
+.row{
+    border:1px solid black;
+    text-align: center;
+    border-radius:20px;
+     padding-left: 5px; 
+    padding-top: 20px;
+    padding-bottom:20px;
+   margin-top:5px;
+    background-color:black;
+    opacity: 0.8;
+   
+}
+.form-group{
+    padding-left:5px;
+    padding-right:5px;
+    margin-left: 1px;
+    margin-right: 1px;
+    position: relative;
+    width: 100%;
+    display:inline;
+   
+    
+    
+} 
+
+.myInput{
+    width:70%;
+    border-radius:10px;
+    
+    
+    
+}
+.form-group i{
+     position:absolute;
+    top:0;
+    right:20px;
+
+}
+.fa{
+    display: inline;
+}
+
+
+.indicator span{
+background-color:rgb(230, 29, 213);
+margin-top: 5px;
+width:80px; 
+height:4px; 
+border-radius:5px;
+ position: relative; 
+ align-items: center;
+ justify-content:space-evenly;
+ margin:3px 60px!important;
+
+}
+
+
+form .indicator span.medium{
+    margin-left:0!important;
+    margin-right:0!important;
+}
+
+.butt{
+    width:30% !important;
+    background: transparent!important;
+    outline: none !important;
+    border:2px solid #fff !important;
+    border-radius:20px !important;
+    color:#fff;
+}
+header{
+    color:#fff;
+}
+
+
+    
+    
+
+
+
+
+
+<!-------------------------Background------------------------->
